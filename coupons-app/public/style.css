@@ -1,0 +1,42 @@
+.logo {
+  width: 4rem;
+  margin: 0.2rem;
+}
+
+.my-navbar {
+  background-color: skyblue;
+}
+
+input {
+  width: 16rem;
+  margin: 1rem;
+}
+
+.coupons-container {
+  width: 75vw;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.couponImage {
+  width: 200px;
+}
+
+.footer-box {
+  height: 1.5rem;
+  width: 100%;
+  background-color: skyblue;
+}
+
+.f-title {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
