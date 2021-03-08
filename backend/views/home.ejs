@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coupons App</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Coupons App</h1> 
+        <a href="/users/logout" class="btn btn-secondary offset-11">Logout</a>
+        <hr />
+    </header>
+
+    <main>
+        <div>
+            <h2>Coupons Available : Pick A Coupon.</h2>
+            <div>
+                    <% coupons.forEach(function(coupon) { %>
+                        <div class="card mt-2" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title"><%= coupon.name %> Coupon</h5>
+                              <h6 class="card-subtitle mb-2 text-muted">GET <%= coupon.discount %> % OFF</h6>
+                              <a href="/apply">Apply Coupon</a>
+                            </div>
+                        </div>
+                    <% }); %>
+            </div>
+            <hr />
+        </div>
+        <div>
+            <h1>Create Coupon : </h1>
+            <form action="/home" method="POST">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Coupon Website : </span>
+                    <input type="text" name="name" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Discount percentage : </span>
+                    <input type="text" name="discount" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3">
+                    Add Coupon
+                </button>
+            </form>
+            
+        </div>   
+    </main>
+</body>
+</html>
+
+
+
